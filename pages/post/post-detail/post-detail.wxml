@@ -1,0 +1,29 @@
+<!--pages/post/post-detail.wxml-->
+<view>
+<view >
+<image src="{{post.Img}}" class="head-image"></image>
+</view>
+<text class="post-text">{{post.Title}}</text>
+</view>
+<view>
+<text class="post-data">{{post.Date}}</text>
+</view>
+<view>
+<text class="content">{{post.Content}}</text>
+</view>
+<view class="tool">
+  <view class="tool-item" catchtap="onUpTap" data-post-id="{{post.postId}}">
+     <image animation="{{animationUp}}" wx:if="{{post.upStatus}}" src="/img/post/wx_app_liked.png" />
+     <image animation="{{animationUp}}" wx:else src="/img/post/wx_app_like.png" />
+    <text>{{post.ReadingNum}}</text>
+  </view>
+  <view class="tool-item comment" catchtap="onCommentTap" data-post-id="{{post.postId}}">
+    <image src="/img/post/wx_app_message.png"></image>
+    <text>{{post.commentNum}}</text>
+  </view>
+  <view class="tool-item" catchtap="onCollectionTap" data-post-id="{{post.postId}}">
+    <image wx:if="{{post.collectionStatus}}" src="/img/post/wx_app_collected.png" />
+    <image wx:else src="/img/post/wx_app_collect.png" />
+    <text>{{post.CallingNum}}</text>
+  </view>
+</view>

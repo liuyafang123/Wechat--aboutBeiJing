@@ -1,0 +1,10 @@
+  {
+   
+      "navigationBarBackgroundColor": "#555",
+      "navigationBarTextStyle": "black",
+      "navigationBarTitleText": "老北京",
+      "backgroundColor": "#666",
+      "backgroundTextStyle": "light",
+      "enablePullDownRefresh": false
+    
+  }

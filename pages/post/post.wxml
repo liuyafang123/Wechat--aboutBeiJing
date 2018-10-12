@@ -1,0 +1,32 @@
+<import src="./../../data/post-item-ptl.wxml"/>
+<view>
+  <swiper indicator-color="red" indicator-dots="true" autoplay="true" interval="4000" vertical="true">
+    <swiper-item>
+      <image src="/img/timg/timg 4.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/img/timg/timg 1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/img/timg/timg 2.jpg"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+
+<view class="post-container">
+  <view class="post-athor-data">
+    <image id="post-img" src="/img/timg/timg.jpg"></image>
+    <text class="post-container-text">老北京</text>
+    <view>
+      <text class="post-athor-text">老北京是对古都北京的传统风俗的叫法。</text>
+    </view>
+  </view>
+</view>
+
+
+<block wx:for="{{postList}}" wx:for-item="item" wx:for-index="idx">
+<view catchtap="onTapDetail" data-post-id="{{item.postId}}">
+<template  is="postItemPtl" data="{{...item}}"></template>
+</view>
+</block>

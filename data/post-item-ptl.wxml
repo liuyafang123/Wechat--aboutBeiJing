@@ -1,0 +1,21 @@
+<template name="postItemPtl">
+<view class="post-container">
+    <view class="post-athor-data">
+      <image class="post-athor-img" src="{{Img}}"></image>
+      <text class="post-athor-text">{{Date}}</text>
+    </view>
+    <view class="post-athors-text">{{Title}}</view>
+    <view class="post-img">
+      <image class="post-athor--img" src="{{IconImg}}" />
+    </view>
+    <view class="post-text">{{Content}}</view>
+    <view>
+      <text class="post-icon-text">{{CallingNum}}</text>
+      <image class="post-athors-img" src="/img/post/wx_app_like.png"></image>
+      <text class="post-icon-text">{{CommentNum}}</text>
+      <image class="post-athors-img" src="/img/post/wx_app_message.png"></image>
+      <text class="post-icon-text">{{ReadingNum}}</text>
+      <image class="post-athors-img" src="/img/post/wx_app_view.png"></image>
+    </view>
+  </view>
+  </template>
